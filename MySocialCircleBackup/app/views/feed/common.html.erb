@@ -24,10 +24,10 @@
 <div class='container'>
   <div class='row'>
     <div class='col-md-1 text-center'>
-      <button type = "button" class = "btn btn-default btn-md">
-        <span class = "glyphicon glyphicon-user"></span><br/>
-        Me
-      </button>
+      <%= link_to my_feed_path, class: "btn btn-default btn-md" do  %>
+          <span class = 'glyphicon glyphicon-user'></span><br/>
+          Me
+      <% end %>
     </div>
     <div class='col-md-10'>
       <div class="form-group">
@@ -38,17 +38,16 @@
       <button type = "button" class = "btn btn-default">Share it</button>
     </div>
   </div>
-  <br/>
   <h3>News form around the world</h3>
   <br/>
 
   <!-- POST ONE -->
   <div class='row'>
     <div class='col-md-1 text-center'>
-      <button type = "button" class = "btn btn-default btn-md">
-        <span class = "glyphicon glyphicon-user"></span><br/>
-        Steve B
-      </button>
+      <%= link_to profile_path, class: "btn btn-default btn-md" do  %>
+          <span class = 'glyphicon glyphicon-user'></span><br/>
+          Steve B
+      <% end %>
     </div>
     <div class='col-md-10'>
       <div class="panel panel-default">
@@ -69,10 +68,10 @@
           <div class="panel-body">
             <div class='row'>
               <div class='col-md-2 text-center'>
-                <button type = "button" class = "btn btn-default btn-md">
-                  <span class = "glyphicon glyphicon-user"></span><br/>
-                  Joey C
-                </button>
+                <%= link_to profile_path, class: "btn btn-default btn-md" do  %>
+                    <span class = 'glyphicon glyphicon-user'></span><br/>
+                    Joey C
+                <% end %>
               </div>
               <div class='col-md-9 well'>
                 omg :O
@@ -81,10 +80,10 @@
             <br/>
             <div class='row'>
               <div class='col-md-2 text-center'>
-                <button type = "button" class = "btn btn-default btn-md">
-                  <span class = "glyphicon glyphicon-user"></span><br/>
-                  Pete F
-                </button>
+                <%= link_to profile_path, class: "btn btn-default btn-md" do  %>
+                    <span class = 'glyphicon glyphicon-user'></span><br/>
+                    Pete F
+                <% end %>
               </div>
               <div class='col-md-9 well'>
                 thats what i call fun
@@ -105,10 +104,10 @@
   <!-- POST TWO -->
   <div class='row'>
     <div class='col-md-1 text-center'>
-      <button type = "button" class = "btn btn-default btn-md">
-        <span class = "glyphicon glyphicon-user"></span><br/>
-        Louis CK
-      </button>
+      <%= link_to profile_path, class: "btn btn-default btn-md" do  %>
+          <span class = 'glyphicon glyphicon-user'></span><br/>
+          Louis CK
+      <% end %>
     </div>
     <div class='col-md-10'>
       <div class="panel panel-default">

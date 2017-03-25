@@ -1,3 +1,27 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+data = [
+  { text: 'schools' }
+  {
+    text: 'likes'
+    nodes: [
+      { text: 'liked TV shows' }
+      { text: 'liked movies' }
+      { text: 'liked things' }
+    ]
+  }
+  { text: 'work' }
+  { text: 'hobbies' }
+]
+
+getTree = ->
+# Some logic to retrieve, or generate tree structure
+  data
+
+ready = ->
+  $('#tree').treeview({
+    data: getTree()
+    levels: 2
+  })
+  return
+
+$(document).ready(ready)
+$(document).on('turbolinks:load', ready)

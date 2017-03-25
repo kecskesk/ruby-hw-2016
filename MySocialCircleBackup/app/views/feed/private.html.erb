@@ -1,13 +1,123 @@
 <nav class="navbar navbar-default" role="navigation">
-  <div class="container">
+  <div class='container'>
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">
-        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+      <a class='navbar-brand' href='/'>
+        <span class='glyphicon glyphicon-user' aria-hidden='true'></span>
         My social
       </a>
     </div>
+
+    <ul class='nav navbar-nav navbar-right'>
+      <li>
+        <%= button_to 'Logout', login_path, class: 'btn btn-primary navbar-btn', method: :get %>
+      </li>
+    </ul>
+
+    <form class="navbar-form" role="search">
+      <div class="form-group col-xs-10">
+        <input type="text" class="form-control" style="width: 100%;" placeholder="Search" name="q">
+      </div>
+    </form>
   </div>
 </nav>
-<div class="container">
-  my_feed
+
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h3>My page</h3>
+      <br/>
+    </div>
+
+    <div class='col-md-6'>
+      <%= link_to 'My profile', my_profile_path, class: 'btn btn-default pull-right' %>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-md-11'>
+      <div class="form-group">
+        <textarea class="form-control" rows="3" id="share" placeholder="Share something cool!"></textarea>
+      </div>
+    </div>
+    <div class='col-md-1'>
+      <button type = "button" class = "btn btn-default">Share it</button>
+    </div>
+  </div>
+
+  <!-- POST ONE -->
+  <div class='row'>
+    <div class='col-md-1 text-center'>
+      <button type = "button" class = "btn btn-default btn-md">
+        <span class = "glyphicon glyphicon-user"></span><br/>
+        Me
+      </button>
+    </div>
+    <div class='col-md-10'>
+      <div class="panel panel-default">
+        <div class="panel-heading text-right">2017.01.17 12:18</div>
+        <div class="panel-body">had a nap</div>
+      </div>
+    </div>
+    <div class='col-md-1'></div>
+  </div>
+
+  <!-- COMMENT SECTION -->
+  <div class='row'>
+    <div class='col-md-1'></div>
+    <div class='col-md-10'>
+
+      <div class='col-md-10'>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class='row'>
+              <div class='col-md-2 text-center'>
+                <%= link_to profile_path, class: "btn btn-default btn-md" do  %>
+                    <span class = 'glyphicon glyphicon-user'></span><br/>
+                    Chloe P
+                <% end %>
+              </div>
+              <div class='col-md-9 well'>
+                lazy
+              </div>
+            </div>
+            <br/>
+            <div class='row'>
+              <div class='col-md-2 text-center'>
+                <%= link_to profile_path, class: "btn btn-default btn-md" do  %>
+                    <span class = 'glyphicon glyphicon-user'></span><br/>
+                    Jessie K
+                <% end %>
+              </div>
+              <div class='col-md-9 well'>
+                thats what i call fun
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <button type = "button" class = "btn btn-default">Comment it</button>
+      </div>
+    </div>
+
+
+    <div class='col-md-1'></div>
+  </div>
+
+  <!-- POST TWO -->
+  <div class='row'>
+    <div class='col-md-1 text-center'>
+      <button type = "button" class = "btn btn-default btn-md">
+        <span class = "glyphicon glyphicon-user"></span><br/>
+        Me
+      </button>
+    </div>
+    <div class='col-md-10'>
+      <div class="panel panel-default">
+        <div class="panel-heading text-right">2017.01.17 12:18</div>
+        <div class="panel-body">New shoes tomorrow!</div>
+      </div>
+    </div>
+    <div class='col-md-1'></div>
+  </div>
 </div>
