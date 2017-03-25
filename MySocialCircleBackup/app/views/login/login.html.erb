@@ -1,0 +1,46 @@
+<nav class='navbar navbar-default' role='navigation'>
+  <div class='container'>
+    <div class='navbar-header'>
+      <a class='navbar-brand' href='/'>
+        <span class='glyphicon glyphicon-user' aria-hidden='true'></span>
+        My social
+      </a>
+    </div>
+    <ul class='nav navbar-nav navbar-right'>
+      <li>
+        <%= button_to 'Register', register_path, class: 'btn btn-primary navbar-btn', method: :get %>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-4'></div>
+    <div class='col-md-4'>
+      <fieldset>
+        <legend>Login to your account</legend>
+        <!-- TODO create sessions -->
+        <%= form_tag '/sessions/create', :method => :post do %>
+            <div class='form-group row'>
+              <%= label_tag :username, 'Username:' %>
+              <%= text_field_tag :username, '', class: 'form-control' %>
+            </div>
+            <div class='form-group row'>
+              <%= label_tag :password, 'Password:' %>
+              <%= password_field_tag :password, '', class: 'form-control' %>
+            </div>
+            <div class='form-group row'>
+              <!-- TODO change to form action -->
+              <!--%= submit_tag 'Login', class: 'btn btn-default pull-right' %-->
+              <%= link_to 'Login', feed_path, class: 'btn btn-default pull-right' %>
+            </div>
+            <div class='form-group row'>
+              <!-- TODO change to email action -->
+              <%= link_to 'Forgot password', feed_path, class: 'btn btn-default pull-right' %>
+            </div>
+        <% end %>
+      </fieldset>
+    </div>
+    <div class='col-md-4'></div>
+  </div>
+</div>
